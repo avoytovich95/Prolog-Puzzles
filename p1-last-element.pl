@@ -1,4 +1,3 @@
-last([E], X) :-
-    X is E.
+last([E], E).
 last([_|T], X) :-
     last(T, X).

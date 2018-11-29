@@ -1,5 +1,4 @@
-compress([I], X) :-
-    X = [I].
+compress([I], [I]).
 compress([H|T], X) :-
     nth0(0, T, First),
     H == First,

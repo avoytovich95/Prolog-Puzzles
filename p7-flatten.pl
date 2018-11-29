@@ -1,11 +1,6 @@
-flatten([E], X) :-
-    not(is_list(E)),
-    X = [E].
-flatten(E, X) :-
-    not(is_list(E)),
-    X = [E].
-flatten([], X) :-
-    X = [].
+flatten(E, [E]) :-
+    not(is_list(E)).
+flatten([], []).
 flatten([H|T], X) :-
     flatten(H, NH),
     flatten(T, NT),
