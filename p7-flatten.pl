@@ -9,5 +9,4 @@ flatten([], X) :-
 flatten([H|T], X) :-
     flatten(H, NH),
     flatten(T, NT),
-    append(NH, NT, Flat),
-    X = Flat.
+    append(NH, NT, X).
