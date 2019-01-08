@@ -1,0 +1,1 @@
+combination(N, List, X).

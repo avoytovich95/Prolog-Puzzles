@@ -1,5 +1,5 @@
 flatten(E, [E]) :-
-    not(is_list(E)).
+    \+ is_list(E).
 flatten([], []).
 flatten([H|T], X) :-
     flatten(H, NH),

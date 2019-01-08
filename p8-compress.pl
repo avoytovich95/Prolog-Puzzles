@@ -1,8 +1,6 @@
 compress([I], [I]).
-compress([H|T], X) :-
-    nth0(0, T, First),
-    H == First,
+compress([H|[SH|T]], X) :-
+    H == SH,
+    compress([SH|T], X).
+compress([H|T], [H|X]) :-
     compress(T, X).
-compress([H|T], X) :-
-    compress(T, NX),
-    append([H], NX, X).
