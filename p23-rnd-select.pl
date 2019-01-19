@@ -1,3 +1,9 @@
+% P23 (**) Extract a given number of randomly selected elements from a list.
+%   The selected items shall be put into a result list.
+%   Example:
+%   ?- rnd_select([a,b,c,d,e,f,g,h],3,L).
+%   L = [e,d,a]
+
 :- ['p20-remove.pl'].
 
 rnd_select(_, 0, []).
